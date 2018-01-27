@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Utils;
 using Zenject;
 
 namespace Dragging
@@ -10,8 +12,11 @@ namespace Dragging
 	public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 	{
 		[Inject]
+		private FingerTracker fingers;
 
 		private new Rigidbody2D rigidbody;
+		private int? fingerId;
+		private Vector3? fingerPosition;
 
 		private void Awake ()
 		{
@@ -20,21 +25,30 @@ namespace Dragging
 
 		public void OnBeginDrag (PointerEventData eventData)
 		{
-
+			fingerId = eventData.pointerId;
+			Debug.Log (string.Format ("Start Drag: {0}", fingerId.Value));
 		}
 
 		public void OnDrag (PointerEventData eventData)
 		{
 			if (eventData.pointerCurrentRaycast.gameObject == gameObject)
-			{
-				//Debug.Log (eventData.pointerCurrentRaycast.worldPosition);
 				rigidbody.position = eventData.pointerCurrentRaycast.worldPosition;
-			}
+			else if (fingerId != null)
+				TryMatchFinger ();
 		}
 
-		public void OnEndDrag (PointerEventData eventData)
-		{
+        private void TryMatchFinger()
+        {
+			if (fingers.TryGetWorldPosition (fingerId.Value, out fingerPosition))
+				rigidbody.position = fingerPosition.Value;
+			else
+				fingerId = null;
+        }
 
+        public void OnEndDrag (PointerEventData eventData)
+		{
+			Debug.Log (string.Format ("End Drag: {0}", fingerId.Value));
+			fingerId = null;
 		}
 	}
 }
