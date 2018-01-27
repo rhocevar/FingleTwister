@@ -9,12 +9,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager
 {
     #region Private Methods
-    protected override void Awake()
+    protected void Awake()
     {
-        base.Awake();
+        //base.Awake();
         Application.targetFrameRate = 30;
     }
 
