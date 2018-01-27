@@ -26,7 +26,7 @@ namespace Dragging
 		public void OnBeginDrag (PointerEventData eventData)
 		{
 			fingerId = eventData.pointerId;
-			Debug.Log (string.Format ("Start Drag: {0}", fingerId.Value));
+			//Debug.Log (string.Format ("Start Drag: {0}", fingerId.Value));
 		}
 
 		public void OnDrag (PointerEventData eventData)
@@ -47,7 +47,7 @@ namespace Dragging
 
         public void OnEndDrag (PointerEventData eventData)
 		{
-			Debug.Log (string.Format ("End Drag: {0}", fingerId.Value));
+			//Debug.Log (string.Format ("End Drag: {0}", fingerId.Value));
 			fingerId = null;
 		}
 	}
