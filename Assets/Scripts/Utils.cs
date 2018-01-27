@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Utils 
+namespace Utils
 {
-	public static bool IsInLayer (this GameObject toCheck, LayerMask mask)
+	public static class Utility 
 	{
-		return ((mask.value & (1 << toCheck.layer)) > 0);
+		public static bool IsInLayer (this GameObject toCheck, LayerMask mask)
+		{
+			return ((mask.value & (1 << toCheck.layer)) > 0);
+		}
 	}
 }
