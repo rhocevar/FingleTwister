@@ -1,14 +1,17 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 //using Utils;
+using Dragging;
 
 public class MainframeController : MonoBehaviour {
 
     [SerializeField] private float holdTimer = 3.0f;
     [SerializeField] private uint nFilesGoal = 2;
 
+    private HashSet<Draggable> mainframeSet;
+
     private LayerMask draggableLayer;
-    private uint filesInMainframe;
     private uint score;
     private float timeCounter;
     private bool isHoldingFiles;
@@ -16,11 +19,11 @@ public class MainframeController : MonoBehaviour {
     private void Awake()
     {
         draggableLayer = LayerMask.NameToLayer("Draggable");
+        mainframeSet = new HashSet<Draggable>();
     }
 
     private void Start()
     {
-        filesInMainframe = 0;
         timeCounter = 0;
         score = 0;
         isHoldingFiles = false;
@@ -31,9 +34,9 @@ public class MainframeController : MonoBehaviour {
         //if(collision.gameObject.IsInLayer(draggableLayer))
         if(collision.gameObject.layer == draggableLayer)
         {
-            filesInMainframe++;
-            Debug.Log("Draggable inside. File counter = " + filesInMainframe);
-            if(filesInMainframe >= nFilesGoal)
+            mainframeSet.Add(collision.GetComponent<Draggable>());
+            Debug.Log("Draggable inside. File counter = " + mainframeSet.Count);
+            if(mainframeSet.Count >= nFilesGoal)
             {
                 isHoldingFiles = true;
                 StartCoroutine(FileTimer());
@@ -46,9 +49,9 @@ public class MainframeController : MonoBehaviour {
         //if (collision.gameObject.IsInLayer(draggableLayer))
         if (collision.gameObject.layer == draggableLayer)
         {
-            filesInMainframe--;
-            Debug.Log("Draggable outside. File counter = " + filesInMainframe);
-            if(filesInMainframe < nFilesGoal)
+            mainframeSet.Remove(collision.GetComponent<Draggable>());
+            Debug.Log("Draggable outside. File counter = " + mainframeSet.Count);
+            if(mainframeSet.Count < nFilesGoal)
             {
                 isHoldingFiles = false;
                 timeCounter = 0;
@@ -82,7 +85,15 @@ public class MainframeController : MonoBehaviour {
         Debug.Log("Score = " + score);
 
         //Do UI updates
-        //Remove files from the screen
+
+        //Remove files from the screen, or reuse them putting them back in the folder)
+        foreach(Draggable d in mainframeSet)
+        {
+            d.transform.position = Vector3.zero;
+        }
+
+        //Remove files from the set
+        mainframeSet.Clear();
     }
 
 }
