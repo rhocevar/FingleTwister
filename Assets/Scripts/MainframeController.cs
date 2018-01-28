@@ -6,34 +6,33 @@ using Dragging;
 using Power;
 using Zenject;
 
-public class MainframeController : IPower {
-
+public class MainframeController : BaseElectricObject
+{
     [SerializeField] private float holdTimer = 3.0f;
     [SerializeField] private uint nFilesGoal = 2;
+    [Inject]
+    private UploadUIController uploadUI;
 
-    private HashSet<Draggable> mainframeSet;
     private LayerMask draggableLayer;
-    private uint score;
     private float timeCounter;
     private bool isHoldingFiles;
+    HashSet<Draggable> mainframeSet;
 
     private void Awake()
     {
         draggableLayer = LayerMask.NameToLayer("Draggable");
         mainframeSet = new HashSet<Draggable>();
-        PowerController.OnPowerChanged += OnPowerChanged;
     }
 
-    private void Start()
+    protected override void Start ()
     {
+        base.Start ();
         timeCounter = 0;
-        score = 0;
         isHoldingFiles = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D (Collider2D collision)
     {
-        //if(collision.gameObject.IsInLayer(draggableLayer))
         if(collision.gameObject.layer == draggableLayer && IsPowerEnabled)
         {
             mainframeSet.Add(collision.GetComponent<Draggable>());
@@ -48,7 +47,6 @@ public class MainframeController : IPower {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //if (collision.gameObject.IsInLayer(draggableLayer))
         if (collision.gameObject.layer == draggableLayer)
         {
             mainframeSet.Remove(collision.GetComponent<Draggable>());
@@ -68,24 +66,19 @@ public class MainframeController : IPower {
             yield return new WaitForEndOfFrame();
 
             timeCounter += Time.deltaTime;
-            //TODO: replace this with a progress bar
-            Debug.Log("Timer running = " + timeCounter);
+            uploadUI.SetProgress (timeCounter / holdTimer);
 
             if (timeCounter >= holdTimer)
-            {
-                UpdateScore();
-            }
+                CompleteUpload ();
         }
     }
 
-    private void UpdateScore()
+    private void CompleteUpload()
     {
-        score++;
         timeCounter = 0;
         isHoldingFiles = false;
 
-        Debug.Log("Score = " + score);
-
+        uploadUI.Complete ();
         //Do UI updates
         ResetFiles();
 
@@ -96,7 +89,6 @@ public class MainframeController : IPower {
     private void ResetMainframe()
     {
         timeCounter = 0;
-        score = 0;
         isHoldingFiles = false;
         ResetFiles();
     }
@@ -104,25 +96,17 @@ public class MainframeController : IPower {
     private void ResetFiles()
     {
         //Remove files from the screen (create temp list because cannot destroy items while iterating over the set)
-        List<Draggable> itemsToRemove = new List<Draggable>();
         foreach (var item in mainframeSet)
         {
-            itemsToRemove.Add(item);
+            Destroy (item.gameObject, 0.1f);
         }
-        foreach (var item in itemsToRemove)
-        {
-            Destroy(item.gameObject);
-        }
+        mainframeSet.Clear ();
     }
 
-    protected override void OnPowerChanged(bool isEnabled)
+    protected override void OnPowerChanged (bool isEnabled)
     {
-        IsPowerEnabled = isEnabled;
-
-        //If power turns to false, reset machine state
+        base.OnPowerChanged (isEnabled);
         if (!isEnabled)
-        {
             ResetMainframe(); 
-        }
     }
 }

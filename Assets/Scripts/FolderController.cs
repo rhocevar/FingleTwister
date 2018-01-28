@@ -6,17 +6,12 @@ using Dragging;
 using Zenject;
 using Power;
 
-public class FolderController : IPower, IPointerDownHandler
+public class FolderController : BaseElectricObject, IPointerDownHandler
 {
     [SerializeField] private GameObject filePrefab;
     [Inject] private IInstantiator instantiator;
 
     private GameObject currentPrefab;
-
-    private void Awake()
-    {
-        PowerController.OnPowerChanged += OnPowerChanged;
-    }
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -29,10 +24,5 @@ public class FolderController : IPower, IPointerDownHandler
             //GetComponent<BoxCollider2D>().enabled = false;
 
         }
-    }
-
-    protected override void OnPowerChanged(bool isEnabled)
-    {
-        IsPowerEnabled = isEnabled;
     }
 }
