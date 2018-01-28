@@ -64,6 +64,11 @@ namespace Dragging
 			fingerId = null;
 		}
 
+        public void ResetPosition()
+        {
+            transform.position = startPosition.Value;
+        }
+
         //Pull the object back to initial position when player stop dragging
         private void DragBack()
         {

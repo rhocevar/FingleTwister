@@ -108,6 +108,10 @@ public class MainframeController : BaseElectricObject
 
     private void ResetFiles()
     {
+        foreach(Draggable d in mainframeSet)
+        {
+            d.ResetPosition();
+        }
         mainframeSet.Clear ();
     }
 
