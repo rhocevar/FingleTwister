@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a91c84b12f6400f900ba9607a3d92c, type: 3}
+  m_Name: AudioSO
+  m_EditorClassIdentifier: 
+  SwitchOn: {fileID: 8300000, guid: 0eab0b3c89a464b178345ab8d49135c7, type: 3}
+  SwitchOff: {fileID: 8300000, guid: 10ac5e49f18cc4910a8092c00019649e, type: 3}
+  Uploading: {fileID: 8300000, guid: 5db5f5d481326458e86da40487a9064a, type: 3}
+  ComputerBreak: {fileID: 8300000, guid: 42bcb04596ed04eb797f49ba0009796b, type: 3}
+  Steady_hum: {fileID: 8300000, guid: e2f2dbb49201e4c3ca5cedec51c7b082, type: 3}
+  PianoBackground: {fileID: 8300000, guid: 112cb7e75e1554ac391c43ef5bd272c2, type: 3}

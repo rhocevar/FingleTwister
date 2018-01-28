@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4858528594922260}
   - component: {fileID: 114142189086873660}
   - component: {fileID: 114652549379424406}
+  - component: {fileID: 114581030199183710}
   m_Layer: 0
   m_Name: ProjectContext
   m_TagString: Untagged
@@ -56,6 +57,18 @@ MonoBehaviour:
   - {fileID: 114652549379424406}
   _installerPrefabs: []
   _scriptableObjectInstallers: []
+--- !u!114 &114581030199183710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901708647439138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f1a03f1a5164511a5896a219f4c35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audios: {fileID: 11400000, guid: cc5e83661d902474094eba3c551a4c84, type: 2}
 --- !u!114 &114652549379424406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,3 +86,4 @@ MonoBehaviour:
   - Level 3
   - Level 4
   - Level 5
+  audio: {fileID: 114581030199183710}

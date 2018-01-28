@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -10,12 +11,15 @@ namespace Power
     public class Switche : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
     {
         [Inject] private PowerController powerController;
+        [Inject] private AudioManager audioManager;
         private Animator animator;
+        private AudioSource audioSource;
         private bool isOn;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         private void Start ()
@@ -58,7 +62,8 @@ namespace Power
             if (isOn) return;
             isOn = true;
 
-
+            audioSource.clip = audioManager.Audios.SwitchOn;
+            audioSource.Play();
 
             powerController.TurnOnSwitche ();
         }
@@ -68,7 +73,8 @@ namespace Power
             if (!isOn) return;
             isOn = false;
 
-            //Button released animation
+            audioSource.clip = audioManager.Audios.SwitchOff;
+            audioSource.Play();
 
             powerController.TurnOffSwitche ();
         }

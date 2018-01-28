@@ -6,6 +6,7 @@ using Dragging;
 using Power;
 using Zenject;
 using System;
+using Audio;
 
 public class MainframeController : BaseElectricObject
 {
@@ -17,7 +18,10 @@ public class MainframeController : BaseElectricObject
     [SerializeField] private uint nFilesGoal = 2;
     [Inject]
     private LevelManager levels;
+    [Inject] AudioManager audioManager;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSourceProcessing;
 
     private LayerMask draggableLayer;
     private float timeCounter;
@@ -36,6 +40,9 @@ public class MainframeController : BaseElectricObject
         base.Start ();
         timeCounter = 0;
         isHoldingFiles = false;
+        audioSource.clip = audioManager.Audios.Steady_hum;
+        audioSource.volume = 1.0f;
+        audioSource.Play();
     }
 
     private void OnTriggerEnter2D (Collider2D collision)
@@ -47,6 +54,9 @@ public class MainframeController : BaseElectricObject
             if(mainframeSet.Count >= nFilesGoal)
             {
                 isHoldingFiles = true;
+                audioSourceProcessing.clip = audioManager.Audios.Uploading;
+                audioSource.volume = 0.5f;
+                audioSourceProcessing.Play();
                 StartCoroutine(FileTimer());
             }
         }
@@ -62,6 +72,9 @@ public class MainframeController : BaseElectricObject
             {
                 isHoldingFiles = false;
                 timeCounter = 0;
+                audioSource.clip = audioManager.Audios.Steady_hum;
+                audioSource.volume = 1.0f;
+                audioSource.Play();
             }
         }
     }
@@ -94,6 +107,9 @@ public class MainframeController : BaseElectricObject
 
         //Remove files from the set
         mainframeSet.Clear();
+        audioSourceProcessing.Stop();
+        audioSource.clip = audioManager.Audios.Steady_hum; //Change to the level complete sfx
+        audioSource.Play();
     }
 
     private void ResetMainframe ()

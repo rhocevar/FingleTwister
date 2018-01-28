@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 
 namespace Power
@@ -8,7 +9,7 @@ namespace Power
 	public class PowerController 
 	{
 		public event Action<bool> OnPowerChanged;
-		
+
 		private int totalSwitches;
 		private int onSwitches;
 
