@@ -100,10 +100,11 @@ public class MainframeController : BaseElectricObject
             OnComplete ();
 
         //Do UI updates
-        ResetFiles();
+        //ResetFiles();
 
         //Remove files from the set
         mainframeSet.Clear();
+
         audioSourceProcessing.Stop();
         audioSource.clip = audioManager.Audios.Steady_hum; //Change to the level complete sfx
         audioSource.Play();

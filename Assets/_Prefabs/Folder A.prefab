@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50475998242829782}
   - component: {fileID: 114136582367326622}
   - component: {fileID: 114623903148189686}
+  - component: {fileID: 114989566289693932}
   m_Layer: 8
   m_Name: Folder A
   m_TagString: Untagged
@@ -161,6 +162,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullBackSpeed: 1
+--- !u!114 &114989566289693932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371857854008082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e6912d7703c4afaac1617e4012a890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onReset: 0
+  onComplete: 1
 --- !u!212 &212180867044300448
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -193,7 +207,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2144476649
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d21878723a464c72a6210d6df4813d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -237,7 +251,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2144476649
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c0cd24114ee354e52b8ef6b9fa08fd1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
