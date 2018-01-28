@@ -51,6 +51,7 @@ public class MainframeController : BaseElectricObject
             {
                 isHoldingFiles = true;
                 audioSourceProcessing.clip = audioManager.Audios.Uploading;
+                audioSourceProcessing.volume = 0.5f;
                 audioSource.volume = 0.5f;
                 audioSourceProcessing.Play();
                 StartCoroutine(FileTimer());
@@ -106,8 +107,9 @@ public class MainframeController : BaseElectricObject
         mainframeSet.Clear();
 
         audioSourceProcessing.Stop();
-        audioSource.clip = audioManager.Audios.TransferSuccessful; //Change to the level complete sfx
-        audioSource.Play();
+        audioSourceProcessing.clip = audioManager.Audios.TransferSuccessful; //Change to the level complete sfx
+        audioSourceProcessing.volume = 1.0f;
+        audioSourceProcessing.Play();
     }
 
     private void ResetMainframe ()
