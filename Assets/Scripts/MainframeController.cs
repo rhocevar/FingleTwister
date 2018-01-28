@@ -86,10 +86,15 @@ public class MainframeController : MonoBehaviour {
 
         //Do UI updates
 
-        //Remove files from the screen, or reuse them putting them back in the folder)
-        foreach(Draggable d in mainframeSet)
+        //Remove files from the screen (create temp list because cannot destroy items while iterating over the set)
+        List<Draggable> itemsToRemove = new List<Draggable>();
+        foreach (var item in mainframeSet)
         {
-            d.transform.position = Vector3.zero;
+            itemsToRemove.Add(item);
+        }
+        foreach (var item in itemsToRemove)
+        {
+            Destroy(item.gameObject);
         }
 
         //Remove files from the set
