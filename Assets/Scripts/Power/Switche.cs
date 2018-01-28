@@ -42,7 +42,10 @@ namespace Power
         {
             if (isOn) return;
             isOn = true;
-            GetComponent<Renderer> ().material.color = Color.green;
+
+            //Button pressed animation
+            //...
+
             powerController.TurnOnSwitche ();
         }
 
@@ -50,7 +53,10 @@ namespace Power
         {
             if (!isOn) return;
             isOn = false;
-            GetComponent<Renderer> ().material.color = Color.white;
+
+            //Button released animation
+            //...
+
             powerController.TurnOffSwitche ();
         }
     }
