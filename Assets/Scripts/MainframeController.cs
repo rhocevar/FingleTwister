@@ -68,6 +68,7 @@ public class MainframeController : BaseElectricObject
             {
                 isHoldingFiles = false;
                 timeCounter = 0;
+                audioSourceProcessing.Stop();
                 audioSource.clip = audioManager.Audios.Steady_hum;
                 audioSource.volume = 1.0f;
                 audioSource.Play();
@@ -103,7 +104,6 @@ public class MainframeController : BaseElectricObject
 
         //Remove files from the set
         mainframeSet.Clear();
-        audioSourceProcessing.clip = null;
         audioSourceProcessing.Stop();
         audioSource.clip = audioManager.Audios.Steady_hum; //Change to the level complete sfx
         audioSource.Play();
