@@ -103,6 +103,7 @@ public class MainframeController : BaseElectricObject
 
         //Remove files from the set
         mainframeSet.Clear();
+        audioSourceProcessing.clip = null;
         audioSourceProcessing.Stop();
         audioSource.clip = audioManager.Audios.Steady_hum; //Change to the level complete sfx
         audioSource.Play();
