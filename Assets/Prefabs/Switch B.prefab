@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58964565048883550}
   - component: {fileID: 114307034580643666}
   m_Layer: 0
-  m_Name: Switche
+  m_Name: Switch B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
