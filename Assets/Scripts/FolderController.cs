@@ -6,23 +6,47 @@ using Dragging;
 using Zenject;
 using Power;
 
-public class FolderController : BaseElectricObject, IPointerDownHandler
+public class FolderController : BaseElectricObject//, IPointerDownHandler
 {
-    [SerializeField] private GameObject filePrefab;
-    [Inject] private IInstantiator instantiator;
-
-    private GameObject currentPrefab;
-
-    public void OnPointerDown(PointerEventData eventData)
+    protected override void OnPowerChanged(bool isEnabled)
     {
-        if(!currentPrefab && IsPowerEnabled)
+        IsPowerEnabled = isEnabled;
+        if (isEnabled)
         {
-            currentPrefab = instantiator.InstantiatePrefab (filePrefab);
-            currentPrefab.transform.position = eventData.pointerCurrentRaycast.worldPosition;
-            //TODO: Start dragging event already
-            //eventData.Use();
-            //GetComponent<BoxCollider2D>().enabled = false;
-
+            foreach(Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
+
+
+
+
+    //[SerializeField] private GameObject filePrefab;
+    //[Inject] private IInstantiator instantiator;
+    //private GameObject currentPrefab;
+
+    //public void OnPointerDown(PointerEventData eventData)
+    //{
+
+
+    //Not gonna spawn files anymore, the whole folder is gonna move
+    //if(!currentPrefab && IsPowerEnabled)
+    //{
+    //    currentPrefab = instantiator.InstantiatePrefab (filePrefab);
+    //    currentPrefab.transform.position = eventData.pointerCurrentRaycast.worldPosition;
+    //    //TODO: Start dragging event already
+    //    //eventData.Use();
+    //    //GetComponent<BoxCollider2D>().enabled = false;
+
+    //}
+    //}
 }

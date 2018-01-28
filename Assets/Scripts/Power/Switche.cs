@@ -58,8 +58,7 @@ namespace Power
             if (isOn) return;
             isOn = true;
 
-            //Button pressed animation
-            animator.SetBool("isPressed", true);
+
 
             powerController.TurnOnSwitche ();
         }
@@ -70,7 +69,6 @@ namespace Power
             isOn = false;
 
             //Button released animation
-            animator.SetBool("isPressed", false);
 
             powerController.TurnOffSwitche ();
         }

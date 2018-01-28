@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Utils;
 using Zenject;
+using Power;
 
 namespace Dragging
 {
@@ -13,7 +14,7 @@ namespace Dragging
 	{
 		[Inject]
 		private FingerTracker fingers;
-
+        [Inject] PowerController powerController;
 		private new Rigidbody2D rigidbody;
 		private int? fingerId;
 		private Vector3? fingerPosition;
@@ -31,7 +32,7 @@ namespace Dragging
 
 		public void OnDrag (PointerEventData eventData)
 		{
-			if (eventData.pointerCurrentRaycast.gameObject == gameObject)
+            if (eventData.pointerCurrentRaycast.gameObject == gameObject && powerController.IsOn)
 				rigidbody.position = eventData.pointerCurrentRaycast.worldPosition;
 			else if (fingerId != null)
 				TryMatchFinger ();

@@ -44,6 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Darkness
+    uniqueID: 3334199821
+    locked: 0
+  - name: Top
+    uniqueID: 3929974881
+    locked: 0
   - name: Draggable
     uniqueID: 2150490647
     locked: 0

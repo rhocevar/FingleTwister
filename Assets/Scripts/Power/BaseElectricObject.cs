@@ -8,7 +8,7 @@ public class BaseElectricObject : MonoBehaviour
 {
     [Inject]
     protected PowerController powerSystem;
-    protected bool IsPowerEnabled { get; private set; }
+    protected bool IsPowerEnabled { get; set; }
 
     protected virtual void Start ()
     {
@@ -18,5 +18,10 @@ public class BaseElectricObject : MonoBehaviour
     protected virtual void OnPowerChanged (bool isEnabled)
     {
         IsPowerEnabled = isEnabled;
+    }
+
+    protected virtual void OnDestroy()
+    {
+        powerSystem.OnPowerChanged -= OnPowerChanged;
     }
 }
