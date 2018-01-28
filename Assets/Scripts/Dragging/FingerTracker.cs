@@ -46,8 +46,8 @@ namespace Dragging
 		{
 			//Debug.Log (fingerId);
 			bool isTouching = touches.TryGetValue (fingerId, out currentTouch);
-			if (isTouching)
-				Debug.Log (string.Format ("TryGetPosition: {0} - {1}", fingerId, currentTouch.fingerId));
+			//if (isTouching)
+			//	Debug.Log (string.Format ("TryGetPosition: {0} - {1}", fingerId, currentTouch.fingerId));
 			position = isTouching? ScreenToWorldPosition (currentTouch.position) : null;
 			return isTouching;
 		}
