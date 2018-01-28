@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Dragging.unity
     guid: 6985ed9974ef84ddb87a51586f0784da
+  - enabled: 1
+    path: Assets/_Scenes/Credits.unity
+    guid: 559be752407e54a5a9be58163bc06f88
