@@ -18,13 +18,9 @@ namespace Power
 
         private void Awake()
         {
+            powerController.AddSwitche();
             animator = GetComponent<Animator>();
             audioSource = GetComponent<AudioSource>();
-        }
-
-        private void Start ()
-        {
-            powerController.AddSwitche ();
         }
 
         #if UNITY_EDITOR
