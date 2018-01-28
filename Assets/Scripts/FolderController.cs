@@ -4,19 +4,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Dragging;
 using Zenject;
+using Power;
 
-public class FolderController : MonoBehaviour, IPointerDownHandler 
+public class FolderController : IPower, IPointerDownHandler
 {
-
     [SerializeField] private GameObject filePrefab;
-    [Inject]
-    private IInstantiator instantiator;
+    [Inject] private IInstantiator instantiator;
 
     private GameObject currentPrefab;
 
+    private void Awake()
+    {
+        PowerController.OnPowerChanged += OnPowerChanged;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(!currentPrefab)
+        if(!currentPrefab && IsPowerEnabled)
         {
             currentPrefab = instantiator.InstantiatePrefab (filePrefab);
             currentPrefab.transform.position = eventData.pointerCurrentRaycast.worldPosition;
@@ -25,5 +29,10 @@ public class FolderController : MonoBehaviour, IPointerDownHandler
             //GetComponent<BoxCollider2D>().enabled = false;
 
         }
+    }
+
+    protected override void OnPowerChanged(bool isEnabled)
+    {
+        IsPowerEnabled = isEnabled;
     }
 }

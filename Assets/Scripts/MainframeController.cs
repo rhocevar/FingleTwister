@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 //using Utils;
 using Dragging;
+using Power;
+using Zenject;
 
-public class MainframeController : MonoBehaviour {
+public class MainframeController : IPower {
 
     [SerializeField] private float holdTimer = 3.0f;
     [SerializeField] private uint nFilesGoal = 2;
 
     private HashSet<Draggable> mainframeSet;
-
     private LayerMask draggableLayer;
     private uint score;
     private float timeCounter;
@@ -20,6 +21,7 @@ public class MainframeController : MonoBehaviour {
     {
         draggableLayer = LayerMask.NameToLayer("Draggable");
         mainframeSet = new HashSet<Draggable>();
+        PowerController.OnPowerChanged += OnPowerChanged;
     }
 
     private void Start()
@@ -32,7 +34,7 @@ public class MainframeController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if(collision.gameObject.IsInLayer(draggableLayer))
-        if(collision.gameObject.layer == draggableLayer)
+        if(collision.gameObject.layer == draggableLayer && IsPowerEnabled)
         {
             mainframeSet.Add(collision.GetComponent<Draggable>());
             Debug.Log("Draggable inside. File counter = " + mainframeSet.Count);
@@ -85,7 +87,22 @@ public class MainframeController : MonoBehaviour {
         Debug.Log("Score = " + score);
 
         //Do UI updates
+        ResetFiles();
 
+        //Remove files from the set
+        mainframeSet.Clear();
+    }
+
+    private void ResetMainframe()
+    {
+        timeCounter = 0;
+        score = 0;
+        isHoldingFiles = false;
+        ResetFiles();
+    }
+
+    private void ResetFiles()
+    {
         //Remove files from the screen (create temp list because cannot destroy items while iterating over the set)
         List<Draggable> itemsToRemove = new List<Draggable>();
         foreach (var item in mainframeSet)
@@ -96,9 +113,16 @@ public class MainframeController : MonoBehaviour {
         {
             Destroy(item.gameObject);
         }
-
-        //Remove files from the set
-        mainframeSet.Clear();
     }
 
+    protected override void OnPowerChanged(bool isEnabled)
+    {
+        IsPowerEnabled = isEnabled;
+
+        //If power turns to false, reset machine state
+        if (!isEnabled)
+        {
+            ResetMainframe(); 
+        }
+    }
 }
