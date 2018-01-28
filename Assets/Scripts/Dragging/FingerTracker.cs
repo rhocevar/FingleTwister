@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -20,14 +21,28 @@ namespace Dragging
 		public void Tick ()
         {
 			touches.Clear ();
+			#if UNITY_EDITOR
+			touches.Add (-1, CreateMockMouseTouch ());
+			#else
 			for (int i=0; i<Input.touchCount; i++)
 			{
 				currentTouch = Input.GetTouch (i);
 				touches.Add (currentTouch.fingerId, currentTouch);
 			}
+			#endif
         }
 
-		public bool TryGetWorldPosition (int fingerId, out Vector3? position)
+		#if UNITY_EDITOR
+		private Touch CreateMockMouseTouch()
+        {
+            Touch mock = new Touch ();
+			mock.fingerId = -1;
+			mock.position = Input.mousePosition;
+			return mock;
+        }
+		#endif
+
+        public bool TryGetWorldPosition (int fingerId, out Vector3? position)
 		{
 			//Debug.Log (fingerId);
 			bool isTouching = touches.TryGetValue (fingerId, out currentTouch);
