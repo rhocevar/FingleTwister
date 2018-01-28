@@ -9,10 +9,15 @@ namespace Power
     [RequireComponent (typeof (Collider2D))]
     public class Switche : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
     {
-        [Inject]
-        private PowerController powerController;
+        [Inject] private PowerController powerController;
+        private Animator animator;
         private bool isOn;
-        
+
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+        }
+
         private void Start ()
         {
             powerController.AddSwitche ();
@@ -44,7 +49,7 @@ namespace Power
             isOn = true;
 
             //Button pressed animation
-            //...
+            animator.SetBool("isPressed", true);
 
             powerController.TurnOnSwitche ();
         }
@@ -55,7 +60,7 @@ namespace Power
             isOn = false;
 
             //Button released animation
-            //...
+            animator.SetBool("isPressed", false);
 
             powerController.TurnOffSwitche ();
         }
