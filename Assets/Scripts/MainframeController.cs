@@ -5,18 +5,25 @@ using UnityEngine;
 using Dragging;
 using Power;
 using Zenject;
+using System;
 
 public class MainframeController : BaseElectricObject
 {
+    public event Action<float> OnProgressChanged;
+    public event Action OnComplete;
+    public event Action OnReset;
+
     [SerializeField] private float holdTimer = 3.0f;
     [SerializeField] private uint nFilesGoal = 2;
     [Inject]
-    private UploadUIController uploadUI;
+    private LevelManager levels;
+
 
     private LayerMask draggableLayer;
     private float timeCounter;
     private bool isHoldingFiles;
     HashSet<Draggable> mainframeSet;
+    private bool isComplete;
 
     private void Awake()
     {
@@ -36,7 +43,7 @@ public class MainframeController : BaseElectricObject
         if(collision.gameObject.layer == draggableLayer && IsPowerEnabled)
         {
             mainframeSet.Add(collision.GetComponent<Draggable>());
-            Debug.Log("Draggable inside. File counter = " + mainframeSet.Count);
+            //Debug.Log("Draggable inside. File counter = " + mainframeSet.Count);
             if(mainframeSet.Count >= nFilesGoal)
             {
                 isHoldingFiles = true;
@@ -50,7 +57,7 @@ public class MainframeController : BaseElectricObject
         if (collision.gameObject.layer == draggableLayer)
         {
             mainframeSet.Remove(collision.GetComponent<Draggable>());
-            Debug.Log("Draggable outside. File counter = " + mainframeSet.Count);
+            //Debug.Log("Draggable outside. File counter = " + mainframeSet.Count);
             if(mainframeSet.Count < nFilesGoal)
             {
                 isHoldingFiles = false;
@@ -66,7 +73,8 @@ public class MainframeController : BaseElectricObject
             yield return new WaitForEndOfFrame();
 
             timeCounter += Time.deltaTime;
-            uploadUI.SetProgress (timeCounter / holdTimer);
+            if (OnProgressChanged != null)
+                OnProgressChanged (timeCounter / holdTimer);
 
             if (timeCounter >= holdTimer)
                 CompleteUpload ();
@@ -77,8 +85,10 @@ public class MainframeController : BaseElectricObject
     {
         timeCounter = 0;
         isHoldingFiles = false;
+        isComplete = true;
+        if (OnComplete != null)
+            OnComplete ();
 
-        uploadUI.Complete ();
         //Do UI updates
         ResetFiles();
 
@@ -86,20 +96,18 @@ public class MainframeController : BaseElectricObject
         mainframeSet.Clear();
     }
 
-    private void ResetMainframe()
+    private void ResetMainframe ()
     {
+        if (isComplete) return;
         timeCounter = 0;
+        if (OnReset != null)
+            OnReset ();
         isHoldingFiles = false;
         ResetFiles();
     }
 
     private void ResetFiles()
     {
-        //Remove files from the screen (create temp list because cannot destroy items while iterating over the set)
-        foreach (var item in mainframeSet)
-        {
-            Destroy (item.gameObject, 0.1f);
-        }
         mainframeSet.Clear ();
     }
 

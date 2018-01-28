@@ -1,0 +1,997 @@
+fileFormatVersion: 2
+guid: 469c84a6933cd4115903fe25c5f03dba
+timeCreated: 1517124608
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: menu_loop_0
+    21300002: menu_loop_1
+    21300004: menu_loop_2
+    21300006: menu_loop_3
+    21300008: menu_loop_4
+    21300010: menu_loop_5
+    21300012: menu_loop_6
+    21300014: menu_loop_7
+    21300016: menu_loop_8
+    21300018: menu_loop_9
+    21300020: menu_loop_10
+    21300022: menu_loop_11
+    21300024: menu_loop_12
+    21300026: menu_loop_13
+    21300028: menu_loop_14
+    21300030: menu_loop_15
+    21300032: menu_loop_16
+    21300034: menu_loop_17
+    21300036: menu_loop_18
+    21300038: menu_loop_19
+    21300040: menu_loop_20
+    21300042: menu_loop_21
+    21300044: menu_loop_22
+    21300046: menu_loop_23
+    21300048: menu_loop_24
+    21300050: menu_loop_25
+    21300052: menu_loop_26
+    21300054: menu_loop_27
+    21300056: menu_loop_28
+    21300058: menu_loop_29
+    21300060: menu_loop_30
+    21300062: menu_loop_31
+    21300064: menu_loop_32
+    21300066: menu_loop_33
+    21300068: menu_loop_34
+    21300070: menu_loop_35
+    21300072: menu_loop_36
+    21300074: menu_loop_37
+    21300076: menu_loop_38
+    21300078: menu_loop_39
+    21300080: menu_loop_40
+    21300082: menu_loop_41
+    21300084: menu_loop_42
+    21300086: menu_loop_43
+    21300088: menu_loop_44
+    21300090: menu_loop_45
+    21300092: menu_loop_46
+    21300094: menu_loop_47
+    21300096: menu_loop_48
+    21300098: menu_loop_49
+    21300100: menu_loop_50
+    21300102: menu_loop_51
+    21300104: menu_loop_52
+    21300106: menu_loop_53
+    21300108: menu_loop_54
+    21300110: menu_loop_55
+    21300112: menu_loop_56
+    21300114: menu_loop_57
+    21300116: menu_loop_58
+    21300118: menu_loop_59
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: menu_loop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_2
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_3
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_4
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_5
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_6
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 3032
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_8
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_9
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_10
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_11
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_12
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_13
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2653
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_15
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_16
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_17
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_18
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_19
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_20
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2274
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_22
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_23
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_24
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_25
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_26
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_27
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1895
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_29
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_30
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_31
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_32
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_33
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_34
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1516
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_36
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_37
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_38
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_39
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_40
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_41
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1137
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_43
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_44
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_45
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_46
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_47
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_48
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 758
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_50
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_51
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_52
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_53
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_54
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_55
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 379
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_57
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_58
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 0
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_loop_59
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 0
+        width: 366
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
