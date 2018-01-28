@@ -36,8 +36,6 @@ public class FolderController : BaseElectricObject//, IPointerDownHandler
     }
 
 
-
-
     //[SerializeField] private GameObject filePrefab;
     //[Inject] private IInstantiator instantiator;
     //private GameObject currentPrefab;
