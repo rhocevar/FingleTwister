@@ -13,7 +13,7 @@ public class LevelInstaller : MonoInstaller
 	public override void InstallBindings ()
 	{
 		Container.BindInterfacesAndSelfTo<FingerTracker> ().FromNew ().AsSingle ();
-		Container.Bind<PowerController> ().FromNew ().AsSingle ();
+		Container.BindInterfacesAndSelfTo<PowerController> ().FromNew ().AsSingle ();
 		Container.Bind<UploadUIController> ().FromComponentInHierarchy ().AsSingle ();
 		Container.Bind<MainframeController> ().FromComponentInHierarchy ().AsSingle ();
 		Container.BindInterfacesAndSelfTo<GameManager> ().FromNew ().AsSingle ().WithArguments (loadSceneTime);

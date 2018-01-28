@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Audio;
 using UnityEngine;
+using Zenject;
 
 namespace Power
 {
-	public class PowerController 
+	public class PowerController: IInitializable 
 	{
 		public event Action<bool> OnPowerChanged;
 
@@ -22,6 +23,12 @@ namespace Power
 		{
 			totalSwitches++;
 		}
+
+		public void Initialize()
+        {
+            SetPowerState (onSwitches == totalSwitches);
+			
+        }
 
 		public void TurnOnSwitche ()
 		{
@@ -43,5 +50,5 @@ namespace Power
 			if (OnPowerChanged != null)
 				OnPowerChanged (IsOn);
         }
-	}
+    }
 }

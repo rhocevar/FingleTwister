@@ -8,9 +8,9 @@ public class BaseElectricObject : MonoBehaviour
 {
     [Inject]
     protected PowerController powerSystem;
-    protected bool IsPowerEnabled { get; set; }
+    protected bool IsPowerEnabled { get; private set; }
 
-    protected virtual void Start ()
+    protected virtual void Awake ()
     {
         powerSystem.OnPowerChanged += OnPowerChanged;
     }

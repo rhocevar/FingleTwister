@@ -8,30 +8,13 @@ using Power;
 
 public class FolderController : BaseElectricObject//, IPointerDownHandler
 {
-    private void Awake()
-    {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(false);
-        }
-    }
 
     protected override void OnPowerChanged(bool isEnabled)
     {
-        IsPowerEnabled = isEnabled;
-        if (isEnabled)
+        base.OnPowerChanged (isEnabled);
+        foreach(Transform child in transform)
         {
-            foreach(Transform child in transform)
-            {
-                child.gameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(false);
-            }
+            child.gameObject.SetActive(isEnabled);
         }
     }
 

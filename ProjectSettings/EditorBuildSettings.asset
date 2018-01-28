@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Dragging.unity
-    guid: 6985ed9974ef84ddb87a51586f0784da
+    path: Assets/_Scenes/Main Menu.unity
+    guid: 4da8375589030414fa57159d2ceba76e
   - enabled: 1
     path: Assets/_Scenes/Level 1.unity
     guid: d6f6f0906cfa44b01818163e2f0c994c
@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level 5.unity
     guid: 545a30d31dfdd4c7a9953c5a2d0a19e6
+  - enabled: 1
+    path: Assets/_Scenes/Dragging.unity
+    guid: 6985ed9974ef84ddb87a51586f0784da

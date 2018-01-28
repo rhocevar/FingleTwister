@@ -11,10 +11,12 @@ public class GlobalInstaller: MonoInstaller, ICoroutineExecuter
 	private string[] levels;
     [SerializeField]
     private AudioManager audio;
+	[SerializeField]
+	private string startScene;
 
 	public override void InstallBindings ()
 	{
-		Container.Bind<LevelManager> ().FromNew ().AsSingle ().WithArguments (levels);
+		Container.Bind<LevelManager> ().FromNew ().AsSingle ().WithArguments (levels, startScene);
 		Container.Bind<ICoroutineExecuter> ().FromInstance (this).AsSingle ();
         Container.Bind<AudioManager>().FromInstance(audio).AsSingle();
 	}
