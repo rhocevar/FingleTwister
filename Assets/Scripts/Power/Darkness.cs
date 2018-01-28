@@ -4,22 +4,16 @@ public class Darkness : BaseElectricObject
 {
     private SpriteRenderer spriteRenderer;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake ();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     protected override void OnPowerChanged(bool isEnabled)
     {
-        IsPowerEnabled = isEnabled;
-        if(isEnabled)
-        {
-            spriteRenderer.enabled = false;
-        }
-        else
-        {
-            spriteRenderer.enabled = true;
-        }
+        base.OnPowerChanged (isEnabled);
+        spriteRenderer.enabled = !isEnabled;
     }
 
 }

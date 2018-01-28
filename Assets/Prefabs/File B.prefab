@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114136582367326622}
   - component: {fileID: 114623903148189686}
   m_Layer: 8
-  m_Name: Folder A
+  m_Name: File B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4048330004421344
 Transform:
   m_ObjectHideFlags: 1
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2144476649
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d21878723a464c72a6210d6df4813d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -237,9 +237,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2144476649
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c0cd24114ee354e52b8ef6b9fa08fd1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 201ef4399023f4a798ef179986ad468d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

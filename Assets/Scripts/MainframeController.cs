@@ -25,15 +25,11 @@ public class MainframeController : BaseElectricObject
     HashSet<Draggable> mainframeSet;
     private bool isComplete;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake ();
         draggableLayer = LayerMask.NameToLayer("Draggable");
         mainframeSet = new HashSet<Draggable>();
-    }
-
-    protected override void Start ()
-    {
-        base.Start ();
         timeCounter = 0;
         isHoldingFiles = false;
     }
@@ -117,6 +113,7 @@ public class MainframeController : BaseElectricObject
 
     protected override void OnPowerChanged (bool isEnabled)
     {
+        //Debug.Log (isEnabled);
         base.OnPowerChanged (isEnabled);
         if (!isEnabled)
             ResetMainframe(); 

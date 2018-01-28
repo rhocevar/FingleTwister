@@ -16,10 +16,6 @@ namespace Power
         private void Awake()
         {
             animator = GetComponent<Animator>();
-        }
-
-        private void Start ()
-        {
             powerController.AddSwitche ();
         }
 
