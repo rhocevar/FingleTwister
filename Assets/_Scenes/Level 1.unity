@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4146817018283022, guid: ef88f040acec34d028b39f714bbc0ccc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.21
+      value: 7.51
       objectReference: {fileID: 0}
     - target: {fileID: 4146817018283022, guid: ef88f040acec34d028b39f714bbc0ccc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.22
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4146817018283022, guid: ef88f040acec34d028b39f714bbc0ccc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -168,11 +168,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4310341490480178, guid: b924ad7a87216437c828753ed8fad476, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4310341490480178, guid: b924ad7a87216437c828753ed8fad476, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.19
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 4310341490480178, guid: b924ad7a87216437c828753ed8fad476, type: 2}
       propertyPath: m_LocalPosition.z
@@ -275,11 +275,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4146817018283022, guid: ef88f040acec34d028b39f714bbc0ccc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.46
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 4146817018283022, guid: ef88f040acec34d028b39f714bbc0ccc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.2
+      value: -3.55
       objectReference: {fileID: 0}
     - target: {fileID: 4146817018283022, guid: ef88f040acec34d028b39f714bbc0ccc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _installers:
-  - {fileID: 0}
+  - {fileID: 2112746419}
   _installerPrefabs: []
   _scriptableObjectInstallers: []
   _autoRun: 1
