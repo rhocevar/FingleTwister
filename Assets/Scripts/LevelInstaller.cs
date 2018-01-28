@@ -11,5 +11,6 @@ public class LevelInstaller : MonoInstaller
 	{
 		Container.BindInterfacesAndSelfTo<FingerTracker> ().FromNew ().AsSingle ();
 		Container.Bind<PowerController> ().FromNew ().AsSingle ();
+		Container.Bind<UploadUIController> ().FromComponentInHierarchy ().AsSingle ();
 	}
 }

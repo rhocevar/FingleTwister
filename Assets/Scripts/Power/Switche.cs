@@ -23,6 +23,16 @@ namespace Power
             powerController.AddSwitche ();
         }
 
+        #if UNITY_EDITOR
+        private void Update ()
+        {
+            if (Input.GetKeyDown (KeyCode.Space))
+                TryTurnOn ();
+            else if (Input.GetKeyUp (KeyCode.Space))
+                TryTurnOff ();            
+        }
+        #endif
+
         public void OnPointerDown(PointerEventData eventData)
         {
             TryTurnOn ();
