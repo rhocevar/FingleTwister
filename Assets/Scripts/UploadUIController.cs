@@ -45,7 +45,7 @@ public class UploadUIController : MonoBehaviour
 
 	private void ResetProgress ()
 	{
-		Debug.Log ("Reset");
+		//Debug.Log ("Reset");
 		ApplyToTexts ((e) => {
 			e.enabled = false;
 			e.text = "Uploading...";

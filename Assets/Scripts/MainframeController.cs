@@ -15,6 +15,8 @@ public class MainframeController : BaseElectricObject
 
     [SerializeField] private float holdTimer = 3.0f;
     [SerializeField] private uint nFilesGoal = 2;
+    [Inject]
+    private LevelManager levels;
 
 
     private LayerMask draggableLayer;
@@ -86,6 +88,7 @@ public class MainframeController : BaseElectricObject
         isComplete = true;
         if (OnComplete != null)
             OnComplete ();
+
         //Do UI updates
         ResetFiles();
 
