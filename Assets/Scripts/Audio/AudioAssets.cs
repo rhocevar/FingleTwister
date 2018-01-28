@@ -13,6 +13,7 @@ namespace Audio
         public AudioClip ComputerBreak;
         public AudioClip Steady_hum;
         public AudioClip PianoBackground;
+        public AudioClip TransferSuccessful;
     }
 }
 

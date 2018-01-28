@@ -106,7 +106,7 @@ public class MainframeController : BaseElectricObject
         mainframeSet.Clear();
 
         audioSourceProcessing.Stop();
-        audioSource.clip = audioManager.Audios.Steady_hum; //Change to the level complete sfx
+        audioSource.clip = audioManager.Audios.TransferSuccessful; //Change to the level complete sfx
         audioSource.Play();
     }
 
